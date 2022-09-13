@@ -29,7 +29,7 @@ domID("kiemTraCau1").addEventListener("click", function () {
   var sumSoDuong = 0;
 
   //duyet mang
-  for (var i = 0; i <= array.length; i++) {
+  for (var i = 0; i < array.length; i++) {
     var value = array[i];
     //neu > 0 thi + vao sumSoDuong
     if (value > 0) {
@@ -49,7 +49,7 @@ domID("kiemTraCau2").addEventListener("click", function () {
   var soLuongSoDuong = 0;
 
   //duyet mang
-  for (var i = 0; i <= array.length; i++) {
+  for (var i = 0; i < array.length; i++) {
     var value = array[i];
     if (value > 0) {
       soLuongSoDuong++;
@@ -69,7 +69,7 @@ domID("kiemTraCau3").addEventListener("click", function () {
   var min = array[0];
 
   //duyet mang
-  for (var i = 0; i <= array.length; i++) {
+  for (var i = 0; i < array.length; i++) {
     var value = array[i];
     if (value < min) {
       min = value;
@@ -87,7 +87,7 @@ domID("kiemTraCau4").addEventListener("click", function () {
   var arraySoDuong = [];
   var ketQua = "";
   //duyet mang array
-  for (var i = 0; i <= array.length; i++) {
+  for (var i = 0; i < array.length; i++) {
     var value = array[i];
     if (value > 0) {
       arraySoDuong.push(value);
@@ -122,7 +122,7 @@ domID("kiemTraCau5").addEventListener("click", function () {
   var arraySoChan = [];
   var ketQua = -1;
   //duyet mang
-  for (var i = 0; i <= array.length; i++) {
+  for (var i = 0; i < array.length; i++) {
     var value = array[i];
     if (value % 2 === 0) {
       arraySoChan.push(value);
@@ -185,6 +185,7 @@ domID("kiemTraCau7").addEventListener("click", function () {
  */
 domID("kiemTraCau8").addEventListener("click", function () {
   var newArr = [];
+  var ketQua = -1;
 
   for (var i = 0; i < array.length; i++) {
     //ep kieu gia tri ve so nguyen bang parseInt
@@ -212,8 +213,11 @@ domID("kiemTraCau8").addEventListener("click", function () {
     return check;
   }
 
+  if (newArr.length > 0) {
+    ketQua = newArr[0];
+  }
   // hienthi
-  domID("hienThiCau8").innerHTML = newArr[0];
+  domID("hienThiCau8").innerHTML = ketQua;
 });
 
 /**
@@ -223,7 +227,7 @@ domID("kiemTraCau8").addEventListener("click", function () {
 domID("kiemTraCau9").addEventListener("click", function () {
   var soDemSoNguyen = 0;
   //loop kiem tra gia tri co phai so nguyen khong
-  for (var i = 0; i <= array.length; i++) {
+  for (var i = 0; i < array.length; i++) {
     //ep value ve so thuc
     var value = parseFloat(array[i]);
 
@@ -249,7 +253,7 @@ domID("kiemTraCau10").addEventListener("click", function () {
   let ketQua = "";
 
   //duyet mang array
-  for (var i = 0; i <= array.length; i++) {
+  for (var i = 0; i < array.length; i++) {
     var value = array[i];
     if (value > 0) {
       soLuongSoDuong++;
