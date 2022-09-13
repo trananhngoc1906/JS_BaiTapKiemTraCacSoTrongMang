@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Bài tập JS buổi 7-8</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container my-5">
+      <div class="card">
+        <div class="card-header alert alert-success">
+          <div
+            class="form-group d-flex align-items-center justify-content-around"
+          >
+            <label for="arraySoNguyen"
+              >Nhập lần lượt các số nguyên vào đây:</label
+            >
+            <input type="number" id="nhapArray" class="form-control w-25" />
+            <button id="addArray" class="btn btn-success">Thêm số</button>
+          </div>
+          <div>Danh sách:<span id="hienThiArray"></span></div>
+        </div>
+        <div class="card-body">
+          <div class="row align-items-end">
+            <div class="col border border-dark">
+              <h5>1. Tổng các số dương trong mảng:</h5>
+              <button id="kiemTraCau1" class="btn btn-success">Kiểm tra</button>
+              <div>Kết quả:<span id="hienThiCau1"></span></div>
+            </div>
+            <div class="col border border-dark">
+              <h5>2. Số lượng các số dương trong mảng:</h5>
+              <button id="kiemTraCau2" class="btn btn-success">Kiểm tra</button>
+              <div>Kết quả:<span id="hienThiCau2"></span></div>
+            </div>
+            <div class="col border border-dark">
+              <h5>3. Số nhỏ nhất trong mảng:</h5>
+              <button id="kiemTraCau3" class="btn btn-success">Kiểm tra</button>
+              <div>Kết quả:<span id="hienThiCau3"></span></div>
+            </div>
+            <div class="col border border-dark">
+              <h5>4. Số dương nhỏ nhất trong mảng:</h5>
+              <button id="kiemTraCau4" class="btn btn-success">Kiểm tra</button>
+              <div>Kết quả:<span id="hienThiCau4"></span></div>
+            </div>
+            <div class="col border border-dark">
+              <h5>5. Số chẵn cuối cùng trong mảng:</h5>
+              <button id="kiemTraCau5" class="btn btn-success">Kiểm tra</button>
+              <div>Kết quả:<span id="hienThiCau5"></span></div>
+            </div>
+          </div>
+          <div class="row my-5 align-items-end">
+            <div class="col border border-dark">
+              <h5>6. Đổi chỗ 2 giá trị trong mảng theo vị trí:</h5>
+              <input
+                id="viTriDau"
+                type="text"
+                class="form-control my-1"
+                placeholder="Vị trí số đầu muốn đổi"
+              />
+              <input
+                id="viTriSau"
+                type="text"
+                class="form-control my-1"
+                placeholder="Vị trí số sau muốn đổi"
+              />
+              <button id="kiemTraCau6" class="btn btn-success">Đổi</button>
+
+              <div>Kết quả:<span id="hienThiCau6"></span></div>
+            </div>
+            <div class="col border border-dark">
+              <h5>7. Sắp xếp mảng theo thứ tự tăng dần:</h5>
+              <button id="kiemTraCau7" class="btn btn-success">Sắp xếp</button>
+              <div>Kết quả:<span id="hienThiCau7"></span></div>
+            </div>
+            <div class="col border border-dark">
+              <h5>8. Tìm số nguyên tố đầu tiên trong mảng:</h5>
+              <button id="kiemTraCau8" class="btn btn-success">Kiểm tra</button>
+              <div>Kết quả:<span id="hienThiCau8"></span></div>
+            </div>
+          </div>
+          <div class="row align-items-end">
+            <div class="col border border-dark">
+              <h5>
+                9. Nhập thêm 1 mảng số thực, tìm xem trong mảng có bao nhiêu số
+                nguyên:
+              </h5>
+              <div class="d-flex justify-content-around">
+                <input
+                  id="inputAddSoThuc"
+                  type="number"
+                  class="form-control w-50"
+                  placeholder="Nhập số thực vào đây"
+                />
+                <button id="addSoThuc" class="btn btn-success">Nhập</button>
+              </div>
+              <div>Danh sách số mới:<span id="listNew"></span></div>
+              <button id="kiemTraCau9" class="btn btn-success">Tìm</button>
+              <div>Kết quả:<span id="hienThiCau9"></span></div>
+            </div>
+            <div class="col border border-dark">
+              <h5>
+                10. So sánh số lượng số dương và số lượng số âm xem số nào nhiều
+                hơn:
+              </h5>
+              <button id="kiemTraCau10" class="btn btn-success">
+                Kiểm tra
+              </button>
+              <div>Kết quả:<span id="hienThiCau10"></span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="./main.js"></script>
+  </body>
+</html>
