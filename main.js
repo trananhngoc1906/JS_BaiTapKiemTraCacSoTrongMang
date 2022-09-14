@@ -198,17 +198,15 @@ domID("kiemTraCau8").addEventListener("click", function () {
 
   //ham checkSNT
   function checkSNT(number) {
-    let check;
+    let check = true;
 
-    if (number <= 1) {
+    if (number < 2) {
       check = false;
-    } else if (number == 2) {
-      check = true;
-    } else if (number > 2 && number % 2 === 0) {
-      //chi can number chia het cho 2(them 1 uoc) thi number khong phai so NT
-      check = false;
-    } else {
-      check = true;
+    }
+    for (var n = 2; n <= Math.sqrt(number); n++) {
+      if (number % n === 0) {
+        check = false;
+      }
     }
     return check;
   }
