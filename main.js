@@ -206,6 +206,7 @@ domID("kiemTraCau8").addEventListener("click", function () {
     for (var n = 2; n <= Math.sqrt(number); n++) {
       if (number % n === 0) {
         check = false;
+        break;
       }
     }
     return check;
